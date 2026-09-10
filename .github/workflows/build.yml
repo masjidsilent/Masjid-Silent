@@ -30,6 +30,7 @@ jobs:
           unzip -q MasjidSilent-PlayStore-1.0.0.zip -d source
 
       - name: Build Android App Bundle
+        working-directory: source/MasjidSilent-PlayReady
         run: gradle :app:bundleRelease --no-daemon -Pkotlin.jvm.target.validation.mode=warning
     
 
